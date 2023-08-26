@@ -28,7 +28,7 @@ use \ArrayAccess;
 
 class QuestionResponse implements ArrayAccess {
     static $swaggerTypes = array(
-        'field_id' => 'int',
+        'field_id' => 'string',
         'name' => 'string',
         'comment' => 'string',
         'type' => 'string',
