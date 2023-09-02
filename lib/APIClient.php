@@ -315,7 +315,9 @@ class APIClient {
         } elseif ($class == 'object') {
             $deserialized = $data;
         } elseif (in_array($class, array('string', 'int', 'float', 'bool'))) {
-            settype($data, $class);
+            try{
+                settype($data, $class);
+            } catch{\Exception $e){}
             $deserialized = $data;
         } else {
             $class = "TimepadApi\\models\\".$class;
